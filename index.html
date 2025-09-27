@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cartita para Joaquín 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="corazones"></div>
+
+  <div class="carta">
+    <div class="corazon"></div>
+    <h1>Hola Corazón 💫</h1>
+    <p>
+      Sé que llevamos poquito tiempo conociéndonos, pero no sé cómo explicarlo…  
+      en este breve espacio, me has inspirado más de lo que imaginaba.  
+      Me he descubierto pensando cosas que no pensaba, sintiendo cosas que no sentía.  
+      Y aunque aún no sé todo de ti, quiero saberlo. Me interesa cada parte de ti:  
+      tus ideas, tus rarezas, tus silencios, tus pasiones.
+    </p>
+    <p>
+      Me encanta tu forma de ver el mundo, tu calma cuando todo se agita,  
+      tu sentido del humor que aparece justo cuando hace falta,  
+      tu manera de escuchar sin interrumpir,  
+      y esa energía tuya que no grita, pero se siente.
+    </p>
+    <p>
+      Estoy orgullosa de la persona que eres.  
+      De cómo te mueves por la vida, de lo que construyes, de lo que cuidas.  
+      Eres mi chefsito favorito, y no solo por lo que cocinas (aunque eso también 😋),  
+      sino por cómo le pones corazón a todo lo que haces.
+    </p>
+
+    <h2 class="pregunta">¿Tú sientes lo que yo?</h2>
+    <div class="botones">
+      <button class="si">Sí 💘</button>
+      <button class="no">No 😶</button>
+    </div>
+
+    <div class="respuesta" style="display:none;">
+      <p>Sabía que sí 💖</p>
+      <div class="explosion"></div>
+    </div>
+
+    <p>Con cariño, Jocabed 🌷</p>
+  </div>
+
+  <script>
+    const noBtn = document.querySelector('.no');
+    const siBtn = document.querySelector('.si');
+    const respuesta = document.querySelector('.respuesta');
+    const explosion = document.querySelector('.explosion');
+
+    noBtn.addEventListener('mouseover', () => {
+      noBtn.style.position = 'absolute';
+      noBtn.style.top = Math.random() * window.innerHeight + 'px';
+      noBtn.style.left = Math.random() * window.innerWidth + 'px';
+    });
+
+    siBtn.addEventListener('click', () => {
+      respuesta.style.display = 'block';
+      siBtn.style.display = 'none';
+      noBtn.style.display = 'none';
+      explosion.classList.add('animar');
+    });
+  </script>
+</body>
+</html>
